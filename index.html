@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function signup(x){
+            let pr1=setTimeout(()=>{
+                console.log("Signup is sucssfully ");
+                x() 
+            },2000)
+           
+            return pr1;
+        }
+
+        function Login(y){
+            let pr2=setTimeout(()=>{
+                console.log("Login sucessfully");
+                y()
+            },1000)
+           
+            return pr2;
+        }
+        function home(){
+            let pr3=setTimeout(()=>{
+                console.log("Home page");
+                
+            },1500)
+            return pr3;
+        }
+
+        signup(()=>{Login(()=>{home()})})
+    </script>
+</body>
+</html>
